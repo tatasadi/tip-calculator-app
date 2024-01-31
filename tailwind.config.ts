@@ -22,6 +22,7 @@ const config = {
         primary: {
           "strong-cyan": "hsl(172, 67%, 45%)",
           red: "hsl(13, 70%, 61%)",
+          "cyan-disabled": "hsl(183, 78%, 24%)",
         },
         neutral: {
           "very-dark-cyan": "hsl(183, 100%, 15%)",

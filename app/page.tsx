@@ -123,7 +123,7 @@ export default function Home() {
   }
 
   return (
-    <main className="flex h-full min-h-screen w-full max-w-7xl flex-col items-center pt-[3.125rem] lg:min-h-0 lg:pt-[7rem]">
+    <main className="flex h-full min-h-screen w-full max-w-7xl flex-col items-center pt-[3.125rem] lg:min-h-0 lg:pt-[5rem]">
       <h1 className="sr-only">Splitter</h1>
       <div className="flex flex-col items-center justify-end gap-[2.554rem] lg:gap-[5.4915rem]">
         <Image src={logo} alt="logo" />
