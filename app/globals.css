@@ -15,6 +15,10 @@
     border: 0;
   }
 
+  .tip-active {
+    @apply bg-primary-strong-cyan text-neutral-very-dark-cyan;
+  }
+
   .footer-link {
     @apply text-neutral-very-dark-cyan hover:text-neutral-dark-cyan cursor-pointer underline;
   }
