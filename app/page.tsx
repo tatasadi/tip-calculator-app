@@ -79,6 +79,11 @@ export default function Home() {
         customTip: newErrors.customTip || [],
         numberOfPeople: newErrors.numberOfPeople || [],
       })
+      setState((prevState) => ({
+        ...prevState,
+        total: 0,
+        tipAmount: 0,
+      }))
     }
   }, [bill, customTip, numberOfPeople, tipPercent])
 
@@ -118,7 +123,7 @@ export default function Home() {
   }
 
   return (
-    <main className="flex h-full min-h-screen w-full max-w-7xl flex-col items-center pt-[3.125rem] lg:min-h-0 lg:pt-[10.19rem]">
+    <main className="flex h-full min-h-screen w-full max-w-7xl flex-col items-center pt-[3.125rem] lg:min-h-0 lg:pt-[8rem]">
       <h1 className="sr-only">Splitter</h1>
       <div className="flex flex-col items-center justify-end gap-[2.554rem] lg:gap-[5.4915rem]">
         <Image src={logo} alt="logo" />
