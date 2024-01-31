@@ -25,7 +25,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${spaceMono.className} flex min-h-screen flex-col items-center justify-center`}
+        className={`${spaceMono.className} bg-neutral-light-grayish-cyan flex min-h-screen flex-col items-center justify-center`}
       >
         {children}
       </body>
