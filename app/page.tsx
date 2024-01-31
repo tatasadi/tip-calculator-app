@@ -26,6 +26,7 @@ const initState = {
   numberOfPeople: "",
   tipPercent: 0,
   tipAmount: 0,
+  total: 0,
   touched: {
     // Add a touched state to track if the user has interacted with the inputs
     bill: false,
@@ -40,8 +41,8 @@ export default function Home() {
     customTip: [] as string[],
     numberOfPeople: [] as string[],
   })
-  const { bill, customTip, numberOfPeople, tipAmount, tipPercent } = state
-  const tipTotal = tipAmount * Number(numberOfPeople)
+  const { bill, customTip, numberOfPeople, tipAmount, tipPercent, total } =
+    state
 
   useEffect(() => {
     const toValidate = {
@@ -60,10 +61,16 @@ export default function Home() {
       const billAmount = Number(bill)
       const tipPercentAmount =
         (tipPercent > 0 ? tipPercent : Number(customTip)) / 100
-      const tipAmount = billAmount * tipPercentAmount
+      const tipAmount = (billAmount * tipPercentAmount) / Number(numberOfPeople)
       setState((prevState) => ({
         ...prevState,
         tipAmount,
+      }))
+      const billTotal = billAmount / Number(numberOfPeople)
+      const total = billTotal + tipAmount
+      setState((prevState) => ({
+        ...prevState,
+        total,
       }))
     } else {
       const newErrors = result.error.flatten().fieldErrors
@@ -215,7 +222,7 @@ export default function Home() {
                   </span>
                 </p>
                 <p className="text-primary-strong-cyan text-[2rem] tracking-[-0.04169rem] lg:text-[3rem]">
-                  ${tipTotal.toFixed(2)}
+                  ${total.toFixed(2)}
                 </p>
               </div>
               <Button
