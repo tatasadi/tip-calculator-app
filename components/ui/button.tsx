@@ -20,7 +20,7 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-800 dark:hover:text-neutral-50",
         link: "text-neutral-900 underline-offset-4 hover:underline dark:text-neutral-50",
-        cyan: "bg-neutral-very-dark-cyan hover:bg-neutral-light-cyan hover:text-neutral-very-dark-cyan text-white focus-visible:ring-transparent",
+        cyan: "bg-neutral-very-dark-cyan hover:bg-neutral-light-cyan hover:text-neutral-very-dark-cyan text-white focus-visible:ring-transparent disabled:opacity-35",
       },
       size: {
         default:

@@ -123,7 +123,7 @@ export default function Home() {
   }
 
   return (
-    <main className="flex h-full min-h-screen w-full max-w-7xl flex-col items-center pt-[3.125rem] lg:min-h-0 lg:pt-[8rem]">
+    <main className="flex h-full min-h-screen w-full max-w-7xl flex-col items-center pt-[3.125rem] lg:min-h-0 lg:pt-[7rem]">
       <h1 className="sr-only">Splitter</h1>
       <div className="flex flex-col items-center justify-end gap-[2.554rem] lg:gap-[5.4915rem]">
         <Image src={logo} alt="logo" />
@@ -235,6 +235,7 @@ export default function Home() {
                 size="lg"
                 className="bg-primary-strong-cyan text-neutral-very-dark-cyan hover:bg-neutral-light-cyan mt-auto w-full text-xl uppercase leading-normal"
                 onClick={handleReset}
+                disabled={total === 0}
               >
                 Reset
               </Button>
