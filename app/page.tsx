@@ -127,7 +127,7 @@ export default function Home() {
       <h1 className="sr-only">Splitter</h1>
       <div className="flex flex-col items-center justify-end gap-[2.554rem] lg:gap-[5.4915rem]">
         <Image src={logo} alt="logo" />
-        <div className="flex flex-col gap-8 rounded-t-[1.5625rem] bg-white py-8 shadow-[0_32px_43px_0_rgba(79,166,175,0.20)] sm:rounded-[1.5625rem] lg:max-w-[57.5rem] lg:flex-row lg:items-stretch lg:gap-12">
+        <div className="flex flex-col gap-8 rounded-t-[1.5625rem] bg-white py-8 shadow-[0_32px_43px_0_rgba(79,166,175,0.20)] sm:rounded-[1.5625rem] lg:max-w-[57.5rem] lg:flex-row lg:items-stretch lg:gap-12 lg:py-0">
           <div className="flex flex-col gap-8 px-8 lg:w-1/2 lg:py-12 lg:pl-12 lg:pr-0">
             <Input
               name="bill"
@@ -142,7 +142,7 @@ export default function Home() {
               showErrors={true}
             />
             <div>
-              <p className="text-neutral-dark-grayish-cyan mb-4">
+              <p className="mb-4 text-neutral-dark-grayish-cyan">
                 Select Tip %
               </p>
               <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
@@ -188,7 +188,7 @@ export default function Home() {
                   value={customTip}
                   onChange={handleChange}
                   placeholder="Custom"
-                  className="placeholder:text-neutral-dark-cyan cursor-pointer text-center"
+                  className="cursor-pointer text-center placeholder:text-neutral-dark-cyan"
                   errors={state.touched.customTip ? errors.customTip : []}
                 />
               </div>
@@ -207,33 +207,33 @@ export default function Home() {
             />
           </div>
           <div className="px-6 lg:w-1/2 lg:py-8 lg:pl-0 lg:pr-8">
-            <div className="bg-neutral-very-dark-cyan flex flex-col rounded-[0.9375rem] px-6 pb-6 pt-[2.44rem] lg:h-full">
+            <div className="flex flex-col rounded-[0.9375rem] bg-neutral-very-dark-cyan px-6 pb-6 pt-[2.44rem] lg:h-full">
               <div className="mb-[1.31rem] flex justify-between font-bold">
                 <p className="text-white">
                   Tip Amount
-                  <span className="text-neutral-grayish-cyan block text-[0.8125rem]">
+                  <span className="block text-[0.8125rem] text-neutral-grayish-cyan">
                     / person
                   </span>
                 </p>
-                <p className="text-primary-strong-cyan text-[2rem] tracking-[-0.04169rem] lg:text-[3rem]">
+                <p className="text-[2rem] tracking-[-0.04169rem] text-primary-strong-cyan lg:text-[3rem]">
                   ${tipAmount.toFixed(2)}
                 </p>
               </div>
               <div className="mb-[1.31rem] flex justify-between font-bold">
                 <p className="text-white">
                   Total
-                  <span className="text-neutral-grayish-cyan block text-[0.8125rem]">
+                  <span className="block text-[0.8125rem] text-neutral-grayish-cyan">
                     / person
                   </span>
                 </p>
-                <p className="text-primary-strong-cyan text-[2rem] tracking-[-0.04169rem] lg:text-[3rem]">
+                <p className="text-[2rem] tracking-[-0.04169rem] text-primary-strong-cyan lg:text-[3rem]">
                   ${total.toFixed(2)}
                 </p>
               </div>
               <Button
                 variant="cyan"
                 size="lg"
-                className="bg-primary-strong-cyan text-neutral-very-dark-cyan hover:bg-neutral-light-cyan mt-auto w-full text-xl uppercase leading-normal"
+                className="mt-auto w-full bg-primary-strong-cyan text-xl uppercase leading-normal text-neutral-very-dark-cyan hover:bg-neutral-light-cyan"
                 onClick={handleReset}
                 disabled={total === 0}
               >
